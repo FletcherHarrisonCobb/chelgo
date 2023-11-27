@@ -2,12 +2,13 @@ var character = document.getElementById("character");
 document.addEventListener("click",jump);
 function jump(){
     character.classList.add("animate");
-    setTimeout(removeJump,300); //300ms = length of animation
+    setTimeout(removeJump,500); 
 };
 function removeJump(){
     character.classList.remove("animate");
 }
 if(character.classList == "animate"){return;}
+
 var block = document.getElementById("block");
 function checkDead(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
