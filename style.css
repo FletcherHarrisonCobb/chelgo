@@ -95,7 +95,9 @@ footer {
     top: 150px; 
    
 }
-.animate
+.animate{
+  animation: jump 500ms ;
+}
 
 @keyframes jump{
     0%{top: 150px;}
