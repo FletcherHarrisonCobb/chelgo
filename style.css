@@ -41,13 +41,21 @@ a:hover {
 h1{
     font-size:3em;
 }
+h4{
+   text-align: center;
+}
+h2{
+   font: bold;
+   text-align: center;
+   margin: 10px 230px 10px 0px
+}
 hr{
   border: none;
   border-top: 3px solid #999;
   color: #999;
   background-color:#999
   height:10px;
-  margin: 20px 0;
+  margin:0px -230px 0px;
 }
 img{
   display: block;
@@ -77,6 +85,7 @@ footer {
   padding: 1em;
   background-color: #000000;
   position: fixed;
+  margin:0px 0px 0px -230px;
   bottom:0px;
   width:100%
 }
