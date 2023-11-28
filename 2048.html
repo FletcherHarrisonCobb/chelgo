@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="differentstyle.css">
+  <link rel="stylesheet" >
   <script src="2048.js" type="module"></script>
 </head>
 <body>
@@ -16,14 +16,91 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <!--<li><a href="schedule.html">Schedule</a></li>-->
-      <li><a href="game.html">Contact</a></li>
+      <li><a href="game.html">Game</a></li>
 
     </ul>
   </nav>
 </header>
 <img src="ChelgoLogo.png" alt="The Official Chelgo Logo">
 <hr>
+<style div>
+  header {
+    background-color: #000000;
+    padding: 0em;
+    text-align: center;
+     }
+  }
+  nav {
+    margin-bottom: 1em;
+  }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 100;
+  }
+
+  li {
+    display: inline;
+    margin-right: 20px;
+    padding: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: white
+  }
+
+
+    #game-board {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    background-color: #CCC;
+    gap: var(--cell-gap);
+    border-radius: 1vmin;
+    padding: var(--cell-gap);
+    position: relative;
+    }
+
+    .cell {
+    background-color: #AAA;
+    border-radius: 1vmin;
+    }
+
+    .tile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: red;
+    border-radius: 1vmin;
+    top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    font-weight: bold;
+    background-color: hsl(200, 50%, var(--background-lightness));
+    color: hsl(200, 25%, var(--text-lightness));
+    animation: show 200ms ease-in-out;
+    transition: 100ms ease-in-out;
+    }
+
+    @keyframes show {
+    0% {
+    opacity: .5;
+    transform: scale(0);
+    }
+    }
+
+</style>
 <div id="game-board"></div>
 
 </body>
