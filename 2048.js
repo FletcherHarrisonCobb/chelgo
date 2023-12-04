@@ -54,7 +54,8 @@ async function handleInput(e) {
 
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
     newTile.waitForTransition(true).then(() => {
-      alert("You lose")
+      while(prompt("you lose") != "password");
+      window.location.reload();
     })
     return
   }
